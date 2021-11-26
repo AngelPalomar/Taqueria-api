@@ -19,6 +19,7 @@ namespace Taqueria.Controllers
         }
 
         // GET: api/<UsuarioController>
+        [Authorize]
         [HttpGet]
         public IEnumerable<Usuario> Get()
         {
@@ -26,6 +27,7 @@ namespace Taqueria.Controllers
         }
 
         // GET api/<UsuarioController>/5
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
@@ -62,6 +64,7 @@ namespace Taqueria.Controllers
         }
 
         // PUT api/<UsuarioController>/5
+        [Authorize]
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Usuario usuario)
         {
@@ -98,6 +101,7 @@ namespace Taqueria.Controllers
         }
 
         // DELETE api/<UsuarioController>/5
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

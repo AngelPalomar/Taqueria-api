@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Taqueria.Context;
 using Taqueria.Models;
 
@@ -6,6 +7,7 @@ using Taqueria.Models;
 
 namespace Taqueria.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class PlatilloController : ControllerBase
